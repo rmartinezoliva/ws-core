@@ -1,17 +1,17 @@
 package ec.blaze.wscore.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
 import lombok.ToString;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 @ToString
 @Document(collection = "orders")
 public class Order implements Serializable {
@@ -21,6 +21,13 @@ public class Order implements Serializable {
 	private String consumer;
 	private String status;
 	private Date date;
+	
+	private List<Item> items;
+	
+	
+	
+	
+	
 	public String getId() {
 		return id;
 	}
@@ -47,7 +54,18 @@ public class Order implements Serializable {
 	}
 	public Order() {
 		super();
-	}	
+		
+		
+	}
+	public List<Item> getItems() {
+		return items;
+	}
+	public void setItems(List<Item> items) {
+		this.items = items;
+	}
+	
+	
+	
 	
 	
 	

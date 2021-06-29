@@ -33,3 +33,15 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+jar {
+  manifest {
+   attributes 'Main-Class': 'ec.incondetec.core.CoreApplication'
+  }
+}
+
+
+compileJava.options.encoding = 'ISO-8859-1'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'ISO-8859-1'
+}

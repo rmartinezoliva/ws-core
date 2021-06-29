@@ -91,7 +91,7 @@ public class ProductsController {
 	
 	
 	@CrossOrigin(origins = {"http://localhost:3005"})
-	@DeleteMapping
+	@PostMapping("/delete")
 	@ApiOperation(value = "Delete product" , notes = "Delete product")
 	public ResponseEntity<?> delete(@Valid @RequestBody RequestId payload , BindingResult result) {	
 		

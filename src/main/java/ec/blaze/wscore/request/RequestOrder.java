@@ -2,8 +2,11 @@ package ec.blaze.wscore.request;
 
 
 
+import java.util.List;
+
 import javax.validation.constraints.NotNull;
 
+import ec.blaze.wscore.model.Item;
 import lombok.Data;
 public class RequestOrder {
 	private String id;
@@ -13,6 +16,9 @@ public class RequestOrder {
 	private String status;
 	@NotNull
 	private String date;
+	
+	private List<Item> items;
+	
 	public String getId() {
 		return id;
 	}
@@ -38,6 +44,14 @@ public class RequestOrder {
 	public void setConsumer(String consumer) {
 		this.consumer = consumer;
 	}
+	public List<Item> getItems() {
+		return items;
+	}
+	public void setItems(List<Item> items) {
+		this.items = items;
+	}
+	
+	
 	
 
     

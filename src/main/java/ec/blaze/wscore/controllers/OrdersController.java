@@ -69,6 +69,8 @@ public class OrdersController {
 		Order order = new Order();
 		order.setConsumer(payload.getConsumer());
 		order.setStatus(payload.getStatus());
+		order.setItems(payload.getItems());
+		
 		order.setDate(new Date());		
 		
 		try {
@@ -90,6 +92,7 @@ public class OrdersController {
 		order.setConsumer(payload.getConsumer());
 		order.setStatus(payload.getStatus());
 		order.setDate(new Date());	
+		order.setItems(payload.getItems());
 		
 		try {
 			order = orderService.save(order);
