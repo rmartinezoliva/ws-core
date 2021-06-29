@@ -37,4 +37,4 @@ The backend is done with
 
 There is embedded tomcat and embedded, in-memory hsql inside.
 
-There is a standard set of libs, like guava, joda-time and so on.
+There is a standard set of libs and so on.
